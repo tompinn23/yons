@@ -1,0 +1,4 @@
+rootProject.name = 'yonside'
+include 'stay'
+include 'yonside'
+
