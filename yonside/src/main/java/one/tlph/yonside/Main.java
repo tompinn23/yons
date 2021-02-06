@@ -1,5 +1,6 @@
 package one.tlph.yonside;
 
+import one.tlph.yonside.renderer.RenderManager;
 import org.lwjgl.*;
 import org.lwjgl.glfw.*;
 import org.lwjgl.opengl.*;
@@ -78,6 +79,8 @@ public class Main {
 
         while(!glfwWindowShouldClose(window)) {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+            RenderManager.getInstance().renderChunks();
 
             glfwSwapBuffers(window);
             glfwPollEvents();
