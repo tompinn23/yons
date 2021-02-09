@@ -1,0 +1,9 @@
+{
+"version": 1,
+"model": {
+	"type": "cube",
+	"top": "blocks/grass_top",
+	"bottom": "blocks/grass_bottom", 
+	"side": "blocks/grass_side"
+	}
+}
