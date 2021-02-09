@@ -16,9 +16,10 @@ public class Chunk implements IStaySerializable {
     public final World world;
     public final ChunkPos pos;
     private Block[] blocks;
+    private boolean isDirty;
 
     public Chunk(ChunkPos pos, World world) {
-        this.world =world;
+        this.world = world;
         this.pos = pos;
         this.blocks = new Block[Width * Depth * Height];
     }
@@ -39,5 +40,18 @@ public class Chunk implements IStaySerializable {
     @Override
     public void Read(Tag tag) {
 
+    }
+
+    public boolean isDirty() {
+        return isDirty;
+    }
+
+    public void setDirty() {
+        this.isDirty = true;
+    }
+
+
+    public void clearDirty() {
+        this.isDirty = false;
     }
 }

@@ -1,4 +1,4 @@
-rootProject.name = 'yonside'
+rootProject.name = 'yons'
 include 'stay'
 include 'yonside'
 

@@ -10,6 +10,15 @@ public class Registry<T> {
 		data = new HashMap<String, T>();
 	}
 
-	
+	public T get(String name) {
+		return data.get(name);
+	}
+
+	public void set(String name, T data) {
+		this.data.put(name, data);
+	}
+
+
+
 	
 }

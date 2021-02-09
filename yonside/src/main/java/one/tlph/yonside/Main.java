@@ -1,5 +1,6 @@
 package one.tlph.yonside;
 
+import one.tlph.yonside.Block.Block;
 import one.tlph.yonside.renderer.RenderManager;
 import org.lwjgl.*;
 import org.lwjgl.glfw.*;
@@ -7,6 +8,8 @@ import org.lwjgl.opengl.*;
 import org.lwjgl.system.*;
 
 import java.nio.*;
+import java.util.*;
+import java.util.stream.*;
 
 import static org.lwjgl.glfw.Callbacks.*;
 import static org.lwjgl.glfw.GLFW.*;
@@ -71,10 +74,12 @@ public class Main {
 
         glfwShowWindow(window);
 
+        GL.createCapabilities();
+        RenderManager.initialise();
+
     }
 
     private void loop() {
-        GL.createCapabilities();
         glClearColor(0.7f, 0.5f, 0.6f, 0.0f);
 
         while(!glfwWindowShouldClose(window)) {
@@ -89,7 +94,6 @@ public class Main {
 
 
     public static void main(String[] args) {
-        System.out.println("Hello World.");
         new Main().run();
     }
 }
